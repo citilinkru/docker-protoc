@@ -17,7 +17,7 @@ docker run --rm -v "$(pwd)":/data citilink/docker-protoc protoc -I=/data/ *.prot
 
 ### JS (GRPC-Web) example
 ```bash
-docker run --rm -v "$(pwd)":/data citilink/docker-protoc protoc -I=/data/ *.proto --go_out=plugins=grpc:/data/
+docker run --rm -v "$(pwd)":/data docker-protoc protoc -I=./data seo.proto --js_out=import_style=commonjs:./data --grpc-web_out=import_style=commonjs,mode=grpcwebtext:./data
 ```
 
 Tags
